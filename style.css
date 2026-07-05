@@ -143,6 +143,22 @@ body {
     background-color: #f5f5f5; /* رنگ کمکی تا زمان لود شدن عکس */
 }
 
+/* بنر مستطیلی بالای یک دسته (مثلاً بالای اپرتیف‌ها) */
+.food-banner {
+    max-width: 600px;
+    margin: 0 auto 15px;
+    padding: 0 16px;
+}
+
+.food-banner img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+}
+
 /* بخش توضیحات متن و قیمت داخل کارت */
 .item-details {
     padding: 12px 14px;
