@@ -1,0 +1,296 @@
+{
+  "food": {
+    "piatti_caldi_pasta": {
+      "has_large_card": false,
+      "items": [
+        {"name": "Lasagne al forno", "price": 9.00},
+        {"name": "Lasagne vegetariane / Vegetarian Lasagna", "price": 9.00},
+        {"name": "Spaghetti alla Carbonara", "price": 10.00},
+        {"name": "Spaghetti al pomodoro / Spaghetti with tomato", "price": 9.00},
+        {"name": "Ravioli pomodoro e basilico / Ravioli tomato and basil", "price": 10.00}
+      ]
+    },
+    "insalatone_salads": {
+      "has_large_card": false,
+      "items": [
+        {"name": "CAPRESE: pomodoro e mozzarella fior di latte / tomato and 'mozzarella fior di latte'", "price": 8.50},
+        {"name": "CAPRESE DI BUFALA / with BUFALO MOZZARELLA", "price": 9.50},
+        {"name": "PROSCIUTTO E MELONE / PARMA HAM AND MELON", "price": 13.00},
+        {"name": "MISTA: Insalata mista, mais, pomodorini, mozzarella, olive / salad, corn, tomato, mozzarella, olives", "price": 8.00},
+        {"name": "MIMOSA: Insalata mista, mais, pomodorini, mozzarella, uova bollite, olive / salad, corn, tomato, mozzarella, eggs, olives", "price": 9.00},
+        {"name": "TONNATA: Insalata mista, pomodorini, mozzarella, mais e tonno / Salad, tomato, mozzarella, corn, tuna", "price": 9.50},
+        {"name": "PANE / BREAD", "price": 1.00}
+      ]
+    },
+    "pizza": {
+      "has_large_card": false,
+      "items": [
+        {"name": "MARGHERITA: pomodoro e mozzarella / tomato and mozzarella", "price": 7.50},
+        {"name": "VERDURE: pomodoro, mozzarella, verdure grigliate / tomato, mozzarella, grilled vegetables", "price": 8.50},
+        {"name": "CAPRICCIOSA: pomodoro, mozzarella, prosciutto e funghi / tomato, mozzarella, ham and mushrooms", "price": 9.00},
+        {"name": "DIAVOLA: pomodoro, mozzarella, salame piccante / tomato, mozzarella, spicy salami", "price": 9.00},
+        {"name": "PRINCIPE: pomodoro, mozzarella, crudo, rucola", "price": 9.50},
+        {"name": "FUNGHI: pomodoro, mozzarella, funghi / tomato, mozzarella, mushrooms", "price": 9.00},
+        {"name": "PORCELLONA: pomodoro, mozzarella, porchetta, funghi / tomato, mozzarella, pork, mushrooms", "price": 9.50},
+        {"name": "QUATRO FORMAGGI: pomodoro, mozzarella, fontina, brie, gorgonzola", "price": 9.50},
+        {"name": "TONNO: pomodoro, mozzarella, tonno / pomodoro, mozzarella, tuna", "price": 9.00}
+      ]
+    },
+    "piadine_wrap": {
+      "has_large_card": false,
+      "base_price": 8.00,
+      "items": [
+        "1: verdure grigliate e fontina / grilled vegetables and cheese",
+        "2: zucchine, cotto e brie / courgettes, ham and brie",
+        "3: crudo, rucola e pomodoro / parma ham, garden rocket, tomato",
+        "4: prosciutto crudo / parma ham",
+        "5: porchetta, melanzane e brie / pork, aubergines, brie",
+        "DIAVOLETTA: salame piccante, peperoncino, peperoni (Spicy salami, chili peppers, grilled peppers)"
+      ]
+    },
+    "hamburger": {
+      "has_large_card": false,
+      "items": [
+        {"name": "CLASSICO: hamburger*, lattuga / hamburger and salad", "price": 7.00},
+        {"name": "CHEESEBURGER: hamburger* e formaggio / hamburger and cheese", "price": 8.00},
+        {"name": "KINGBURGER: hamburger*, formaggio, pancetta, lattuga, pomodoro / hamburger, cheese, pancetta, salad, tomato", "price": 9.00},
+        {"name": "ENERGETICO: cotoletta*, pomodoro, formaggio e lattuga / chicken cutlet, tomato, formaggio", "price": 8.50}
+      ]
+    },
+    "panini_sandwiches": {
+      "has_large_card": false,
+      "items": [
+        {"name": "Salame e mozzarella / Salami and mozzarella", "price": 7.00},
+        {"name": "Cotto e mozzarella / Ham and mozzarella", "price": 7.00},
+        {"name": "Crudo e mozzarella / Ham and mozzarella", "price": 7.50},
+        {"name": "PORCELLONE: porchetta, brie e rucola (pork, brie, garden rocket)", "price": 7.50},
+        {"name": "INFERNO: salame piccante, rucola, peperoncino e provola (spicy salami, garden rocket, chili pepper, provola cheese)", "price": 7.00},
+        {"name": "TRICOLORE: mozzarella, pomodoro e lattuga (mozzarella, tomato, salad)", "price": 6.50},
+        {"name": "BUFALINO: mozzarella di bufala, lattuga, pomodoro, origano (Bufala cheese, lettuce, tomato, origan)", "price": 7.50},
+        {"name": "VEGETARIANO: grilled vegetables and cheese", "price": 7.00},
+        {"name": "NOSTROMO: tonno, pomodoro, formaggio e lattuga (tuna, tomato, cheese, salad)", "price": 7.50},
+        {"name": "TOAST (prosciutto e formaggio / ham and cheese)", "price": 4.50},
+        {"name": "TOAST FARCITO", "price_range": [5.50, 6.50]},
+        {"name": "Variazioni / Variations", "price_info": "da 0.50 a 2.00"}
+      ]
+    }
+  },
+  "drinks": {
+    "caffetteria_coffe": {
+      "has_large_card": false,
+      "items": [
+        {"name": "Caffè espresso / Espresso Coffe", "price": 2.50},
+        {"name": "caffè marocchino / Maarocchino Coffe", "price": 2.50},
+        {"name": "Caffè americano / Americano coffe", "price": 2.50},
+        {"name": "Caffè decaffeinato / Decaffeinato coffe", "price": 2.50},
+        {"name": "Americano decaffeinato / Decaffeinato Americano", "price": 2.80},
+        {"name": "Cappuccino or Decaffeinated cappuccino", "price": 3.00},
+        {"name": "Caffelatatte / Coffe with milk", "price": 4.00},
+        {"name": "The caldo / Hot tea", "price": 3.50},
+        {"name": "Cioccolata Calda / Hot chocolate", "price": 5.00},
+        {"name": "Caffè frappè", "price": 5.50},
+        {"name": "Con latte di soia / soia milk", "price": "+0.50"},
+        {"name": "Frullato di banana / Banana smoothie", "price": 6.00}
+      ]
+    },
+    "spremute_fresh_squeezed_fruit": {
+      "has_large_card": false,
+      "items": [
+        {"name": "Arancia / Orange", "price": 6.00},
+        {"name": "Pompelmo / Grapefruit", "price": 6.00}
+      ]
+    },
+    "aperitivi_aperitifs": {
+      "has_large_card": false,
+      "items": [
+        {"name": "Analcolici / Analcholich (Sanbitter, Crodino, Gingerino)", "price": 4.00},
+        {"name": "Spritz (aperol, campari, select, cynar)", "price": 5.00},
+        {"name": "Spritz bastardo", "price": 5.50},
+        {"name": "Spritz Limoncello", "price": 6.00},
+        {"name": "Bitter Campari&Soda", "price": 5.50},
+        {"name": "Campari soda (bottiglia / bottle)", "price": 4.50},
+        {"name": "Bellini", "price": 6.00},
+        {"name": "Hugo", "price": 6.00},
+        {"name": "Martini bianco (white)", "price": 6.00},
+        {"name": "Martini rosso (red)", "price": 6.00}
+      ]
+    },
+    "soft_drinks": {
+      "has_large_card": false,
+      "items": [
+        {"name": "Coca cola", "price": 4.00},
+        {"name": "Coca cola zero", "price": 4.00},
+        {"name": "Fanta", "price": 4.00},
+        {"name": "Sprite", "price": 4.00},
+        {"name": "Chinotto", "price": 4.00},
+        {"name": "The freddo (pesca o limone) / Ice tea(lemon or peach)", "price": 4.00},
+        {"name": "Aranciata amara", "price": 4.00},
+        {"name": "Cedrata Tassoni", "price": 4.00},
+        {"name": "Schweppes Tonica", "price": 4.00},
+        {"name": "Schweppes Lemon", "price": 4.00},
+        {"name": "Lemon Soda", "price": 4.00},
+        {
+          "name": "Succhi di frutta / Fruit Juices", 
+          "price": 4.00,
+          "options": ["albicocca", "ananas", "arancia", "mela verde", "mirtillo", "pera", "pesca", "pomodoro", "pompelmo"]
+        },
+        {"name": "Acqua minerale naturale (naturale / flat) 1/2 LT", "price": 3.00},
+        {"name": "Acqua minerale frizzante (frizzante / sparkling) 1/2 LT", "price": 3.00}
+      ]
+    },
+    "long_drinks": {
+      "has_large_card": false,
+      "items": [
+        {"name": "Campari Orange", "price": 9.00},
+        {"name": "Bloody Mary", "price": 9.00},
+        {"name": "Gin Tonic", "price_range": [10.00, 12.00]},
+        {"name": "Gin Lemon", "price_range": [10.00, 12.00]},
+        {"name": "Vodka Lemon", "price": 10.00},
+        {"name": "Vodka Tonic", "price": 10.00},
+        {"name": "Vodka Orange", "price": 10.00},
+        {"name": "Cuba Libre", "price": 9.00},
+        {"name": "Mimosa", "price": 10.00},
+        {"name": "Americano", "price": 8.50},
+        {"name": "Negroni", "price": 9.50},
+        {"name": "Negroni sbagliato", "price": 9.00},
+        {"name": "Mojito", "price": 10.00},
+        {"name": "Whisky cola", "price": 10.00},
+        {"name": "Tequila Sunrise", "price": 10.00}
+      ]
+    },
+    "birre_in_bottiglia": {
+      "has_large_card": false,
+      "items": [
+        {"name": "Moretti RADLER", "price": 6.00},
+        {"name": "Moretti la Rossa 33cl", "price": 6.00},
+        {"name": "Moretti Zero 33cl", "price": 5.50},
+        {"name": "Nastro Azzurro 33cl", "price": 5.00},
+        {"name": "Ceres 33cl", "price": 6.00},
+        {"name": "Heineken 33cl", "price": 5.00},
+        {"name": "Corona 33cl", "price": 5.00},
+        {"name": "BECK'S 33cl", "price": 4.50},
+        {"name": "BEGGIA 33cl", "price": 6.50}
+      ]
+    },
+    "birra_moretti_alla_spina": {
+      "has_large_card": false,
+      "items": [
+        {"name": "20cl", "price": 4.00},
+        {"name": "40cl", "price": 7.00},
+        {"name": "100cl", "price": 15.00}
+      ]
+    },
+    "vino_della_casa_house_wine": {
+      "has_large_card": false,
+      "items": [
+        {"name": "1/4 LT", "price": 7.00},
+        {"name": "1/2 LT", "price": 9.00},
+        {"name": "1 LT", "price": 13.00},
+        {"name": "Calice", "price": 3.00}
+      ]
+    },
+    "vini_in_bottiglia_wine_list": {
+      "has_large_card": false,
+      "sub_categories": {
+        "bianchi_white": [
+          {"name": "Pinot Grigio", "price_calice": 4.50, "price_bottiglia": 25.00},
+          {"name": "Chardonnay", "price_calice": 4.50, "price_bottiglia": 25.00},
+          {"name": "Soave", "price_calice": 4.50, "price_bottiglia": 25.00},
+          {"name": "Sauvignon", "price_calice": 4.50, "price_bottiglia": 25.00},
+          {"name": "Lugana", "price_calice": 5.00, "price_bottiglia": 25.00},
+          {"name": "Vermentino IGP SALENTO", "price_calice": 6.00, "price_bottiglia": 28.00}
+        ],
+        "rossi_red": [
+          {"name": "Cabernet Franc", "price_calice": 4.50, "price_bottiglia": 25.00},
+          {"name": "Cabernet Sauvignon", "price_calice": 4.50, "price_bottiglia": 25.00},
+          {"name": "Chianti DOCG", "price_calice": 5.00, "price_bottiglia": 25.00},
+          {"name": "Valpolicella ripasso", "price_calice": 6.00, "price_bottiglia": 27.00}
+        ],
+        "rosati_rose": [
+          {"name": "Rosato", "price_calice": 4.50, "price_bottiglia": 25.00}
+        ],
+        "bollicine_sparkling_wine": [
+          {"name": "Prosecco DOC", "price_calice": 4.50, "price_bottiglia": 25.00},
+          {"name": "Prosecco Superiore di Valdobbiadene DOCG", "price_calice": 5.00, "price_bottiglia": 28.00},
+          {"name": "Moscato", "price_calice": 4.50, "price_bottiglia": 25.00}
+        ]
+      }
+    },
+    "liquori_e_amari_liquer_and_bitters": {
+      "has_large_card": false,
+      "items": [
+        {"name": "Amari liquori nazionali / National bitters and Liquer", "price_range": [4.50, 5.00]},
+        {"name": "Grappe", "price_range": [4.50, 6.00]},
+        {"name": "Whisky", "price_range": [6.00, 7.00]}
+      ]
+    }
+  },
+  "snacks": {
+    "tramezzini": {
+      "has_large_card": true,
+      "card_image": "assets/images/cards/tramezzini_large.jpg",
+      "base_price": 3.00,
+      "items": [
+        {"category": "Granchio", "flavors": ["granchio e salsa guacamole", "granchio e uova"]},
+        {"category": "Tonno", "flavors": ["tonno e uova", "tonno e pomodoro", "tonno e olive nere", "tonno e cipolla", "tonno e rucola"]},
+        {"category": "Porchetta", "flavors": ["porchetta e funghi", "porchetta e salsa al radicchio"]},
+        {"category": "Piccante", "flavors": []},
+        {"category": "Prosciutto", "flavors": ["prosciutto e funghi", "prosciutto e carciofi"]},
+        {"category": "Verdure", "flavors": ["caprese con pomodoro, lattuga e formaggio", "verdure con melanzane, zucchine e peperoni"]}
+      ]
+    },
+    "cicchetti_typical_venetian_tapas": {
+      "has_large_card": true,
+      "card_image": "assets/images/cards/cicchetti_large.jpg",
+      "items": [
+        {
+          "name": "Al pezzo / One piece", 
+          "price": 2.50,
+          "options": [
+            "al baccalà", "al granchio", "al tonno", "al polpo", "alle sarde", "ai gamberi", 
+            "alle verdure", "con gorgonzola e noci", "con marmellata di fichi", "con mortadella", 
+            "con pancetta", "con porchetta"
+          ]
+        },
+        {
+          "name": "Polpette", 
+          "price": 3.00,
+          "options": ["di carne", "di verdure"]
+        }
+      ]
+    },
+    "altri_snack": {
+      "has_large_card": true,
+      "card_image": "assets/images/cards/altri_snack_large.jpg",
+      "base_price": 3.00,
+      "items": [
+        {"name": "Mozzarella in carrozza", "options": ["con acciughe", "con prosciutto cotto"]},
+        {"name": "Paninetto", "options": ["con verdure", "con salame"]},
+        {"name": "Croissant salato", "options": ["con prosciutto e formaggio"]}
+      ]
+    }
+  },
+  "dessert": {
+    "pasticceria_pastry": {
+      "has_large_card": true,
+      "card_image": "assets/images/cards/pasticceria_large.jpg",
+      "items": [
+        {
+          "name": "Croissant con varie farciture", 
+          "price": 3.00,
+          "options": ["al cioccolato", "alla crema", "alla marmellata", "al pistacchio", "vuoto"]
+        },
+        {
+          "name": "Pasticcerie al pezzo", 
+          "price": 3.00,
+          "options": ["Crostata alle mandorle", "Crostata al cioccolato", "Crostata alla marmellata", "Frolla al cioccolato", "Frolla alla marmellata"]
+        },
+        {
+          "name": "Pasticcerie al pezzo (Mignon)", 
+          "price": 1.00,
+          "options": ["Mignon al cioccolato", "Mignon alla marmellata"]
+        }
+      ]
+    }
+  }
+}
