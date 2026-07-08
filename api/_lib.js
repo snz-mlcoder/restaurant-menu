@@ -33,8 +33,10 @@ function verifyToken(token) {
   return Number.isFinite(expiry) && expiry > Date.now();
 }
 
+const SUPABASE_URL = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
+
 async function supabaseRequest(path, options) {
-  const res = await fetch(process.env.SUPABASE_URL + path, {
+  const res = await fetch(SUPABASE_URL + path, {
     ...options,
     headers: {
       apikey: process.env.SUPABASE_SERVICE_ROLE_KEY,
