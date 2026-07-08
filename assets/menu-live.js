@@ -5,6 +5,7 @@
 (function () {
   var scriptTag = document.currentScript;
   var page = scriptTag && scriptTag.getAttribute("data-page");
+  var syncNames = scriptTag && scriptTag.getAttribute("data-sync-names") === "true";
   if (!page || !window.SUPABASE_URL || !window.SUPABASE_ANON_KEY) return;
 
   var endpoint =
@@ -41,7 +42,7 @@
     if (existing) {
       var h3 = existing.querySelector("h3");
       var price = existing.querySelector(".price");
-      if (h3) h3.textContent = row.name;
+      if (syncNames && h3) h3.textContent = row.name;
       if (price) price.textContent = row.price;
       return;
     }
