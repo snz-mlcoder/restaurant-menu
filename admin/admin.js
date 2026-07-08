@@ -64,6 +64,18 @@
     loadItems();
   }
 
+  // Turns a plain number like "6" or "5,5" into "€6.00" / "€5.50". Anything
+  // that isn't a single plain number (ranges, "Glass: ... | Bottle: ...",
+  // "one piece: €2.50", etc.) is left exactly as typed.
+  function formatPrice(raw) {
+    var trimmed = raw.trim();
+    var match = trimmed.match(/^€?\s*(\d+)(?:[.,](\d{1,2}))?$/);
+    if (!match) return trimmed;
+    var whole = match[1];
+    var frac = ((match[2] || "") + "00").slice(0, 2);
+    return "€" + whole + "." + frac;
+  }
+
   function getEditedBy() {
     var name = nameInput.value.trim();
     if (!name) {
@@ -155,6 +167,9 @@
     var priceField = document.createElement("input");
     priceField.className = "admin-input admin-input-price";
     priceField.value = item.price;
+    priceField.addEventListener("blur", function () {
+      priceField.value = formatPrice(priceField.value);
+    });
 
     var status = document.createElement("span");
     status.className = "admin-row-status";
@@ -166,6 +181,7 @@
       var editedBy = getEditedBy();
       if (!editedBy) return;
 
+      priceField.value = formatPrice(priceField.value);
       mutate({
         action: "update",
         id: item.id,
@@ -219,6 +235,9 @@
     var priceField = document.createElement("input");
     priceField.className = "admin-input admin-input-price";
     priceField.placeholder = "€0.00";
+    priceField.addEventListener("blur", function () {
+      priceField.value = formatPrice(priceField.value);
+    });
 
     var status = document.createElement("span");
     status.className = "admin-row-status";
@@ -230,7 +249,7 @@
       var editedBy = getEditedBy();
       if (!editedBy) return;
       var name = nameField.value.trim();
-      var price = priceField.value.trim();
+      var price = formatPrice(priceField.value.trim());
       if (!name || !price) {
         flashStatus(status, "Name and price required", true);
         return;
