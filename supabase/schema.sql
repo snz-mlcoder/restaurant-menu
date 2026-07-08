@@ -7,7 +7,7 @@ create table if not exists menu_items (
   category_label text not null,
   name text not null,
   price text not null,
-  sort_order integer not null,
+  sort_order bigint not null,
   is_custom boolean not null default false,
   is_deleted boolean not null default false,
   last_edited_by text,

@@ -105,7 +105,7 @@ async function handleAdd(body, editedBy) {
       category_label: categoryLabel,
       name,
       price,
-      sort_order: Date.now(),
+      sort_order: Math.floor(Date.now() / 1000),
       is_custom: true,
       last_edited_by: editedBy,
       updated_at: new Date().toISOString(),
