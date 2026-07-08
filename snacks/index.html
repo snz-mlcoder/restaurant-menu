@@ -19,8 +19,8 @@
     <div class="food-banner">
         <img src="images/chichetti_baner.jpg" alt="Cicchetti">
     </div>
-    <div class="menu-grid">
-        <div class="menu-item">
+    <div class="menu-grid" data-page="snacks" data-category="cicchetti">
+        <div class="menu-item" data-id="snacks-cicchetti-1">
             <img src="images/cicchetti.jpg" alt="Cicchetti" class="food-img">
             <div class="item-details">
                 <h3>Traditional Cicchetti (Per Piece)</h3>
@@ -28,7 +28,7 @@
                 <span class="price">one piece: €2.50</span>
             </div>
         </div>
-        <div class="menu-item">
+        <div class="menu-item" data-id="snacks-cicchetti-2">
             <img src="images/polpette.jpg" alt="Polpette" class="food-img">
             <div class="item-details">
                 <h3>Polpette (Meatballs / Veggie Balls)</h3>
@@ -56,9 +56,9 @@
 
     <!-- Other Quick Snacks -->
     <h2 class="category-title">Other Quick Snacks</h2>
-    <div class="menu-grid">
+    <div class="menu-grid" data-page="snacks" data-category="quick-snacks">
 
-        <div class="menu-item">
+        <div class="menu-item" data-id="snacks-quick-snacks-1">
             <img src="images/Mozzarella.jpg" alt="Mozzarella in Carrozza" class="food-img">
 
             <div class="item-details">
@@ -67,7 +67,7 @@
                 <span class="price"> one piece: €3.00</span>
             </div>
         </div>
-        <div class="menu-item">
+        <div class="menu-item" data-id="snacks-quick-snacks-2">
             <img src="images/paninetto.jpg" alt="Small Roll (Paninetto)" class="food-img">
 
             <div class="item-details">
@@ -76,7 +76,7 @@
                 <span class="price">€3.00</span>
             </div>
         </div>
-        <div class="menu-item">
+        <div class="menu-item" data-id="snacks-quick-snacks-3">
             <img src="images/croissant.jpg" alt="Savory Croissant" class="food-img">
             <div class="item-details">
                 <h3>Savory Croissant</h3>
@@ -86,5 +86,7 @@
         </div>
     </div>
 
+    <script src="../assets/supabase-config.js"></script>
+    <script src="../assets/menu-live.js" data-page="snacks"></script>
 </body>
 </html>

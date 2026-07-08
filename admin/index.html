@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Admin - Bar Canton</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <div class="nav-back">
+        <a href="../index.html">← Back to Main Menu</a>
+    </div>
+
+    <h1 class="section-title">Menu Admin</h1>
+
+    <div id="login-view" class="admin-panel">
+        <label class="admin-label" for="password-input">Password</label>
+        <input id="password-input" type="password" class="admin-input" placeholder="Password" autocomplete="off">
+        <button id="login-btn" class="admin-btn admin-btn-primary">Enter</button>
+        <p id="login-error" class="admin-error" hidden></p>
+    </div>
+
+    <div id="editor-view" class="admin-panel" hidden>
+        <label class="admin-label" for="name-input">Your name</label>
+        <input id="name-input" type="text" class="admin-input" placeholder="e.g. Monica" autocomplete="off">
+        <p id="name-error" class="admin-error" hidden>Type your name before saving, adding, or deleting.</p>
+
+        <p id="items-status" class="admin-label">Loading menu…</p>
+        <div id="items-root"></div>
+    </div>
+
+    <script src="../assets/supabase-config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
