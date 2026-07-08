@@ -17,9 +17,12 @@
   var itemsRoot = document.getElementById("items-root");
 
   var token = sessionStorage.getItem("admin_token");
-  nameInput.value = sessionStorage.getItem("admin_name") || "";
+  // Name is remembered per-device in localStorage (not sessionStorage) so
+  // staff don't have to retype it every time they open the page, with a
+  // generic default pre-filled until someone changes it.
+  nameInput.value = localStorage.getItem("admin_name") || "Staff";
   nameInput.addEventListener("input", function () {
-    sessionStorage.setItem("admin_name", nameInput.value);
+    localStorage.setItem("admin_name", nameInput.value);
   });
 
   if (token) {
