@@ -1,92 +1,19 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snack & Cicchetti - Bar Canton</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
-
-    <div class="nav-back">
-        <a href="../index.html">← Torna al Menu Principale</a>
-    </div>
-
-    <h1 class="section-title">Snack & Cicchetti Veneziani</h1>
-
-    <!-- Cicchetti Veneziani -->
-    <h2 class="category-title">Cicchetti Veneziani</h2>
-    <div class="food-banner">
-        <img src="../../snacks/images/chichetti_baner.jpg" alt="Cicchetti">
-    </div>
-    <div class="menu-grid" data-page="snacks" data-category="cicchetti">
-        <div class="menu-item" data-id="snacks-cicchetti-1">
-            <img src="../../snacks/images/cicchetti.jpg" alt="Cicchetti" class="food-img">
-            <div class="item-details">
-                <h3>Cicchetti Tradizionali (al pezzo)</h3>
-                <p>Guarnizioni disponibili: Baccalà mantecato, Granchio, Tonno, Polpo, Sarde, Gamberi, Verdure grigliate, Gorgonzola e Noci, Marmellata di fichi, Mortadella, Pancetta, Porchetta.</p>
-                <span class="price">al pezzo: €2.50</span>
-            </div>
-        </div>
-        <div class="menu-item" data-id="snacks-cicchetti-2">
-            <img src="../../snacks/images/polpette.jpg" alt="Polpette" class="food-img">
-            <div class="item-details">
-                <h3>Polpette (Carne o Verdure)</h3>
-                <p>Tradizionali polpette fritte italiane. A scelta di Carne o Verdure.</p>
-                <span class="price">al pezzo: €3.00</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Tramezzini -->
-    <h2 class="category-title">Tramezzini</h2>
-    <div class="food-banner">
-        <img src="../../snacks/images/tra_banner.jpg" alt="Tramezzini">
-    </div>
-
-    <div class="menu-grid-flat">
-        <div class="base-price-tag">Tutti i Tramezzini: €3.00</div>
-        <div class="flat-item"><b>Granchio:</b> Granchio e Guacamole / Granchio e Uova</div>
-        <div class="flat-item"><b>Tonno:</b> Tonno e Uova / Tonno e Pomodoro / Tonno e Olive Nere / Tonno e Cipolla / Tonno e Rucola</div>
-        <div class="flat-item"><b>Porchetta:</b> Porchetta e Funghi / Porchetta e salsa al Radicchio</div>
-        <div class="flat-item"><b>Prosciutto Cotto:</b> Prosciutto e Funghi / Prosciutto e Carciofi</div>
-        <div class="flat-item"><b>Vegetariano:</b> Caprese (pomodoro, lattuga, formaggio) / Verdure grigliate (melanzane, zucchine, peperoni)</div>
-        <div class="flat-item"><b>Disponibile versione piccante</b></div>
-    </div>
-
-    <!-- Altri Snack Veloci -->
-    <h2 class="category-title">Altri Snack Veloci</h2>
-    <div class="menu-grid" data-page="snacks" data-category="quick-snacks">
-
-        <div class="menu-item" data-id="snacks-quick-snacks-1">
-            <img src="../../snacks/images/Mozzarella.jpg" alt="Mozzarella in Carrozza" class="food-img">
-
-            <div class="item-details">
-                <h3>Mozzarella in Carrozza</h3>
-                <p>Sandwich di mozzarella fritta con Acciughe o Prosciutto Cotto</p>
-                <span class="price"> al pezzo: €3.00</span>
-            </div>
-        </div>
-        <div class="menu-item" data-id="snacks-quick-snacks-2">
-            <img src="../../snacks/images/paninetto.jpg" alt="Paninetto" class="food-img">
-
-            <div class="item-details">
-                <h3>Paninetto</h3>
-                <p>Con Verdure o Salame</p>
-                <span class="price">€3.00</span>
-            </div>
-        </div>
-        <div class="menu-item" data-id="snacks-quick-snacks-3">
-            <img src="../../snacks/images/croissant.jpg" alt="Cornetto Salato" class="food-img">
-            <div class="item-details">
-                <h3>Cornetto Salato</h3>
-                <p>Farcito con prosciutto e formaggio</p>
-                <span class="price">€3.00</span>
-            </div>
-        </div>
-    </div>
-
+    <div id="menu-root"></div>
+    <script src="../../assets/site-config.js"></script>
+    <script src="../../assets/menu-data.js"></script>
     <script src="../../assets/supabase-config.js"></script>
-    <script src="../../assets/menu-live.js" data-page="snacks"></script>
+    <script src="../../assets/menu-live.js"></script>
+    <script src="../../assets/menu-render.js" data-page="snacks" data-lang="it"></script>
 </body>
 </html>

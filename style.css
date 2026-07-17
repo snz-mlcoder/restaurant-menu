@@ -1,32 +1,44 @@
 /* ==========================================================================
    BAR CANTON - PREMIUM DIGITAL MENU STYLES (MOBILE OPTIMIZED)
+   Typography and colors matched to the printed Canton A3 paper menu:
+   serif type, navy-blue accents, cream paper background.
    ========================================================================== */
+
+/* Font is loaded via <link> in each page's <head> (not @import here) so the
+   browser's preload scanner can fetch it in parallel with this stylesheet
+   instead of waiting to discover it after style.css finishes downloading --
+   that extra round trip was causing visible font swapping between sections. */
+
+:root {
+    --navy: #35659e;
+    --navy-soft: #6684ac;
+    --paper: #fdfbf7;
+    --ink: #2c2c2c;
+}
 
 /* ۱. تنظیمات پایه‌ای برای هماهنگی اندازه در موبایل */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
 }
 
 body {
-    background-color: #fdfbf7; /* یک پس‌زمینه کرم ملایم و شیک برای خسته نشدن چشم */
-    color: #2c2c2c;
+    background-color: var(--paper); /* یک پس‌زمینه کرم ملایم و شیک برای خسته نشدن چشم */
+    color: var(--ink);
     line-height: 1.5;
     padding-bottom: 60px; /* فضای خالی در پایین صفحه برای اسکرول راحت‌تر */
 }
 
 /* ۲. استایل هدر بالای صفحه (برند بار کانتون) */
 .bar-header {
-    background-color: #1a1a1a; /* مشکی ذغالی شیک */
-    color: #ffffff;
+    background-color: var(--paper);
+    color: var(--ink);
     text-align: center;
-    padding: 45px 20px;
-    border-bottom-left-radius: 24px;
-    border-bottom-right-radius: 24px;
+    padding: 40px 20px 28px;
+    border-bottom: 1px solid #e4ddcf;
     margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 .bar-logo {
@@ -35,26 +47,79 @@ body {
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 12px;
-    border: 2px solid #f39c12;
+    border: 2px solid var(--navy);
 }
 
 .bar-header h1 {
-    font-size: 2.4rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: #f39c12; /* رنگ طلایی آمبر مخصوص بار */
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink);
     margin-bottom: 6px;
 }
 
 .bar-header p {
-    font-size: 0.95rem;
-    color: #b3b3b3;
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--navy);
+}
+
+/* ۲.۵ ردیف انتخاب زبان بالای دسته‌بندی‌ها */
+.language-row {
+    max-width: 480px;
+    margin: 18px auto 16px;
+    padding: 0 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.lang-btn {
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    color: #1a1a1a;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.lang-btn:active {
+    background-color: #f5f5f5;
+    transform: scale(0.98);
+}
+
+.lang-btn-active {
+    background-color: var(--navy);
+    border-color: var(--navy);
+    color: #ffffff;
+    cursor: default;
+}
+
+.lang-btn-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.lang-note {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin: 10px 16px 0;
 }
 
 /* ۳. دکمه‌های صفحه اصلی (۴ دسته بندی اصلی) */
 .main-categories {
     max-width: 480px;
-    margin: 0 auto;
+    margin: 20px auto 0;
     padding: 0 16px;
     display: flex;
     flex-direction: column;
@@ -90,7 +155,7 @@ body {
     margin: 0 auto;
 }
 .nav-back a {
-    color: #e67e22; /* نارنجی زنده (تم کوکتل اسپریتس) */
+    color: var(--navy);
     text-decoration: none;
     font-weight: bold;
     font-size: 0.95rem;
@@ -98,27 +163,44 @@ body {
 
 /* ۵. عناوین منوهای داخلی */
 .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
     text-align: center;
-    font-size: 1.8rem;
-    color: #1a1a1a;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--ink);
     margin-bottom: 5px;
 }
 
+.page-note {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--navy-soft);
+    margin-bottom: 20px;
+}
+
 .category-title {
-    background-color: #f39c12;
-    color: white;
-    padding: 8px 16px;
-    font-size: 1.1rem;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-weight: bold;
+    background-color: transparent;
+    color: var(--navy);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+    padding: 0 16px 8px;
+    font-size: 1.4rem;
+    margin-top: 34px;
+    margin-bottom: 16px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid var(--navy);
 }
 
 .sub-category-title {
-    color: #7f8c8d;
+    color: var(--navy-soft);
     padding: 5px 16px;
     font-size: 1.05rem;
-    border-left: 4px solid #f39c12;
+    font-style: italic;
+    border-left: 4px solid var(--navy);
     margin: 15px 0 10px 16px;
 }
 
@@ -168,33 +250,42 @@ body {
     display: block;
 }
 
-/* بخش توضیحات متن و قیمت داخل کارت */
+/* بخش توضیحات متن و قیمت داخل کارت: اسم و قیمت روی یک خط، توضیح زیرش */
 .item-details {
     padding: 12px 14px;
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline;
     justify-content: center;
+    column-gap: 10px;
 }
 
 .item-details h3 {
-    font-size: 1.05rem;
-    color: #1a1a1a;
-    margin-bottom: 4px;
+    order: 1;
+    flex: 1 1 auto;
+    font-size: 1.1rem;
+    color: var(--ink);
     font-weight: 600;
 }
 
 .item-details p {
-    font-size: 0.85rem;
+    order: 3;
+    flex-basis: 100%;
+    width: 100%;
+    font-size: 0.88rem;
+    font-style: italic;
     color: #666;
-    margin-bottom: 6px;
+    margin-top: 4px;
     line-height: 1.3;
 }
 
 /* استایل قیمت که درشت و خوانا است */
 .price {
+    order: 2;
+    white-space: nowrap;
     font-size: 1.1rem;
-    color: #e67e22; 
+    color: var(--navy);
     font-weight: 700;
 }
 
@@ -212,7 +303,7 @@ body {
 }
 
 .base-price-tag {
-    background-color: #27ae60; /* سبز برای نشان دادن قیمت ثابت و اقتصادی */
+    background-color: var(--navy);
     color: white;
     text-align: center;
     padding: 8px;
@@ -238,13 +329,39 @@ body {
     color: #7f8c8d !important;
 }
 
+/* اسم ایتالیایی زیر اسم ترجمه‌شده -- برای اینکه کارکنان (که ایتالیایی
+   می‌فهمند) بدونن مشتری دقیقاً کدوم آیتم رو نشون داده */
+.it-hint {
+    order: 3;
+    flex-basis: 100%;
+    width: 100%;
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--navy);
+    margin-top: 2px;
+}
+
+.flat-item .it-hint {
+    margin-top: 4px;
+}
+
 .highlighted {
-    border: 1px solid #f39c12;
+    border: 1px solid var(--navy);
     background-color: #fffdf9;
 }
 
 .font-sub {
     background-color: #f9f9f9;
+}
+
+.menu-footnote {
+    max-width: 600px;
+    margin: -6px auto 20px;
+    padding: 0 16px;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #7f8c8d;
 }
 
 /* ۸. صفحه‌ی ادمین (ادیت قیمت‌ها) */
@@ -288,7 +405,7 @@ body {
 }
 
 .admin-btn-primary {
-    background-color: #f39c12;
+    background-color: var(--navy);
     color: #ffffff;
 }
 

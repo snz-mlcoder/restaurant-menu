@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bar Canton - Digital Menu</title>
+    <title>Bar Canton - Menu Digitale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,17 +14,104 @@
     <header class="bar-header">
         <img src="logo.jpg" alt="Bar Canton" class="bar-logo">
         <h1>Bar Canton</h1>
-        <p>Welcome! Please choose your language</p>
+        <p data-tagline>Benvenuti! Scegliete una categoria per vedere il menu</p>
     </header>
 
-    <div class="main-categories">
-        <a href="en/index.html" class="menu-box">
-            <span>🇬🇧 English</span>
+    <div class="language-row" role="group" aria-label="Choose language">
+        <button type="button" class="lang-btn" data-lang="it">🇮🇹 Italiano</button>
+        <button type="button" class="lang-btn" data-lang="en">🇬🇧 English</button>
+        <button type="button" class="lang-btn" data-lang="es">🇪🇸 Español</button>
+        <button type="button" class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+        <button type="button" class="lang-btn" data-lang="de">🇩🇪 Deutsch</button>
+        <button type="button" class="lang-btn" data-lang="zh">🇨🇳 中文</button>
+    </div>
+
+    <p class="lang-note" data-lang-note hidden></p>
+
+    <div class="main-categories" data-categories>
+        <a href="it/coffee-croissants/index.html" class="menu-box">
+            <span>☕ Caffetteria & Cornetti</span>
         </a>
-        <a href="it/index.html" class="menu-box">
-            <span>🇮🇹 Italiano</span>
+        <a href="it/drinks/index.html" class="menu-box">
+            <span>🍹 Bevande & Vini</span>
+        </a>
+        <a href="it/foods/index.html" class="menu-box">
+            <span>🍕 Cucina & Pizza</span>
+        </a>
+        <a href="it/snacks/index.html" class="menu-box">
+            <span>🥪 Snack & Cicchetti</span>
         </a>
     </div>
+
+    <script>
+        const CATEGORIES = [
+            { icon: '☕', it: 'Caffetteria & Cornetti', en: 'Coffee & Croissants', es: 'Cafetería y Cruasanes', fr: 'Café & Croissants', de: 'Kaffee & Croissants', zh: '咖啡与羊角面包', slug: 'coffee-croissants' },
+            { icon: '🍹', it: 'Bevande & Vini', en: 'Drinks & Wine', es: 'Bebidas y Vinos', fr: 'Boissons & Vins', de: 'Getränke & Wein', zh: '饮品与葡萄酒', slug: 'drinks' },
+            { icon: '🍕', it: 'Cucina & Pizza', en: 'Food & Pizza', es: 'Comida y Pizza', fr: 'Cuisine & Pizza', de: 'Speisen & Pizza', zh: '美食与披萨', slug: 'foods' },
+            { icon: '🥪', it: 'Snack & Cicchetti', en: 'Snacks & Cicchetti', es: 'Snacks y Cicchetti', fr: 'Snacks & Cicchetti', de: 'Snacks & Cicchetti', zh: '小吃与Cicchetti', slug: 'snacks' }
+        ];
+
+        const AVAILABLE_LANGS = {
+            it: {
+                tagline: 'Benvenuti! Scegliete una categoria per vedere il menu',
+                htmlLang: 'it'
+            },
+            en: {
+                tagline: 'Welcome! Please select a category to view our menu',
+                htmlLang: 'en'
+            },
+            es: {
+                tagline: '¡Bienvenidos! Elija una categoría para ver el menú',
+                htmlLang: 'es'
+            },
+            fr: {
+                tagline: 'Bienvenue ! Choisissez une catégorie pour voir le menu',
+                htmlLang: 'fr'
+            },
+            de: {
+                tagline: 'Willkommen! Bitte wählen Sie eine Kategorie, um das Menü zu sehen',
+                htmlLang: 'de'
+            },
+            zh: {
+                tagline: '欢迎光临！请选择一个类别查看菜单',
+                htmlLang: 'zh'
+            }
+        };
+
+        const COMING_SOON_NOTE = {};
+
+        const categoriesEl = document.querySelector('[data-categories]');
+        const taglineEl = document.querySelector('[data-tagline]');
+        const noteEl = document.querySelector('[data-lang-note]');
+        const buttons = document.querySelectorAll('.lang-btn');
+
+        function renderCategories(lang) {
+            categoriesEl.innerHTML = CATEGORIES.map(cat => {
+                const href = lang === 'en' ? `${cat.slug}/index.html` : `${lang}/${cat.slug}/index.html`;
+                return `<a href="${href}" class="menu-box"><span>${cat.icon} ${cat[lang]}</span></a>`;
+            }).join('');
+        }
+
+        function setLang(lang) {
+            buttons.forEach(btn => btn.classList.toggle('lang-btn-active', btn.dataset.lang === lang));
+
+            if (AVAILABLE_LANGS[lang]) {
+                document.documentElement.lang = AVAILABLE_LANGS[lang].htmlLang;
+                taglineEl.textContent = AVAILABLE_LANGS[lang].tagline;
+                noteEl.hidden = true;
+                renderCategories(lang);
+            } else {
+                noteEl.textContent = COMING_SOON_NOTE[lang] || '';
+                noteEl.hidden = false;
+            }
+        }
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => setLang(btn.dataset.lang));
+        });
+
+        setLang('it');
+    </script>
 
 </body>
 </html>

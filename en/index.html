@@ -1,37 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bar Canton - Digital Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-
-    <div class="nav-back">
-        <a href="../index.html">← Change language</a>
-    </div>
-
-    <header class="bar-header">
-        <img src="../logo.jpg" alt="Bar Canton" class="bar-logo">
-        <h1>Bar Canton</h1>
-        <p>Welcome! Please select a category to view our menu</p>
-    </header>
-
-    <div class="main-categories">
-        <a href="../coffee-croissants/index.html" class="menu-box">
-            <span>☕ Coffee & Croissants</span>
-        </a>
-        <a href="../drinks/index.html" class="menu-box">
-            <span>🍹 Drinks & Wine</span>
-        </a>
-        <a href="../foods/index.html" class="menu-box">
-            <span>🍕 Food & Pizza</span>
-        </a>
-        <a href="../snacks/index.html" class="menu-box">
-            <span>🥪 Snacks & Cicchetti</span>
-        </a>
-    </div>
-
+    <div id="menu-root"></div>
+    <script src="../assets/site-config.js"></script>
+    <script src="../assets/menu-data.js"></script>
+    <script src="../assets/picker-render.js" data-lang="en"></script>
 </body>
 </html>

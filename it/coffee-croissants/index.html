@@ -1,87 +1,19 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caffetteria & Cornetti - Bar Canton</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
-
-    <div class="nav-back">
-        <a href="../index.html">← Torna al Menu Principale</a>
-    </div>
-
-    <h1 class="section-title">Caffetteria & Cornetti</h1>
-
-    <h2 class="category-title">Pasticceria</h2>
-    <div class="food-banner">
-        <img src="../../coffee-croissants/images/croissants.jpg" alt="Cornetti Farciti">
-    </div>
-    <div class="menu-grid" data-page="coffee-croissants" data-category="sweet-pastry">
-        <div class="menu-item" data-id="coffee-croissants-sweet-pastry-1">
-            <div class="item-details">
-                <h3>Cornetti Farciti</h3>
-                <p>Farciture disponibili: Cioccolato, Crema, Marmellata, Pistacchio o Vuoto</p>
-                <span class="price">€3.00</span>
-            </div>
-        </div>
-    </div>
-
-    <h2 class="category-title">Caffetteria</h2>
-    <div class="food-banner">
-        <img src="../../coffee-croissants/images/coffee.jpg" alt="Caffetteria">
-    </div>
-    <div class="menu-grid" data-page="coffee-croissants" data-category="cafeteria-coffee">
-        <div class="menu-item" data-id="coffee-croissants-cafeteria-coffee-1">
-            <div class="item-details"><h3>Caffè Espresso</h3><span class="price">€2.50</span></div>
-        </div>
-        <div class="menu-item" data-id="coffee-croissants-cafeteria-coffee-2">
-            <div class="item-details"><h3>Caffè Marocchino</h3><span class="price">€2.50</span></div>
-        </div>
-        <div class="menu-item" data-id="coffee-croissants-cafeteria-coffee-3">
-            <div class="item-details"><h3>Caffè Americano</h3><span class="price">€2.50</span></div>
-        </div>
-        <div class="menu-item" data-id="coffee-croissants-cafeteria-coffee-4">
-            <img src="../../coffee-croissants/images/deca.jpg" alt="Decaffeinato" class="food-img">
-            <div class="item-details"><h3>Espresso Decaffeinato</h3><span class="price">€2.50</span></div>
-        </div>
-        <div class="menu-item" data-id="coffee-croissants-cafeteria-coffee-5">
-            <img src="../../coffee-croissants/images/deca.jpg" alt="Decaffeinato" class="food-img">
-            <div class="item-details"><h3>Americano Decaffeinato</h3><span class="price">€2.80</span></div>
-        </div>
-        <div class="menu-item" data-id="coffee-croissants-cafeteria-coffee-6">
-            <div class="item-details"><h3>Cappuccino / Cappuccino Decaffeinato</h3><span class="price">€3.00</span></div>
-        </div>
-        <div class="menu-item" data-id="coffee-croissants-cafeteria-coffee-7">
-            <div class="item-details"><h3>Caffellatte</h3><span class="price">€4.00</span></div>
-        </div>
-        <div class="menu-item" data-id="coffee-croissants-cafeteria-coffee-8">
-            <div class="item-details">
-                <h3>Tè Caldo</h3>
-                <p class="options-list">Gusti: Earl Grey, English Breakfast, Camomilla, Menta, Frutti di Bosco, Tè Verde</p>
-                <span class="price">€3.50</span>
-            </div>
-        </div>
-        <div class="menu-item" data-id="coffee-croissants-cafeteria-coffee-9">
-            <div class="item-details"><h3>Cioccolata Calda</h3><span class="price">€5.00</span></div>
-        </div>
-        <div class="menu-item" data-id="coffee-croissants-cafeteria-coffee-10">
-            <div class="item-details">
-                <h3>Caffè Frappé</h3>
-                <p class="options-list">Caffè freddo: latte, caffè, ghiaccio, zucchero facoltativo.</p>
-                <span class="price">€5.50</span>
-            </div>
-        </div>
-        <div class="menu-item font-sub" data-id="coffee-croissants-cafeteria-coffee-11">
-            <div class="item-details"><h3>Opzione Latte di Soia</h3><span class="price">+€0.50</span></div>
-        </div>
-        <div class="menu-item" data-id="coffee-croissants-cafeteria-coffee-12">
-            <div class="item-details"><h3>Frullato alla Banana</h3><span class="price">€6.00</span></div>
-        </div>
-    </div>
-
+    <div id="menu-root"></div>
+    <script src="../../assets/site-config.js"></script>
+    <script src="../../assets/menu-data.js"></script>
     <script src="../../assets/supabase-config.js"></script>
-    <script src="../../assets/menu-live.js" data-page="coffee-croissants"></script>
+    <script src="../../assets/menu-live.js"></script>
+    <script src="../../assets/menu-render.js" data-page="coffee-croissants" data-lang="it"></script>
 </body>
 </html>
