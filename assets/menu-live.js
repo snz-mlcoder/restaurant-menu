@@ -34,10 +34,17 @@ function applyMenuLive(page, syncNames) {
 }
 
 function applyRow(row, syncNames) {
-  var existing = document.querySelector('.menu-item[data-id="' + row.id + '"]');
+  var existing = document.querySelector('[data-id="' + row.id + '"]');
 
   if (row.is_deleted) {
     if (existing) existing.style.display = "none";
+    return;
+  }
+
+  if (existing && !existing.classList.contains("menu-item")) {
+    // A single size of a multi-size item (e.g. a wine's Glass or Bottle
+    // price) -- just its own price element, not a whole .menu-item.
+    existing.textContent = row.price;
     return;
   }
 

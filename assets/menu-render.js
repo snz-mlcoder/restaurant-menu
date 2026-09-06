@@ -29,6 +29,9 @@
     root.appendChild(note);
   }
 
+  var pageHasAllergens = pageContainsAllergenData(data);
+  if (pageHasAllergens) root.appendChild(buildAllergenLink(lang));
+
   data.categories.forEach(function (cat) {
     root.appendChild(buildCategoryTitle(cat.title[lang]));
 
@@ -107,6 +110,39 @@
     return p;
   }
 
+  // ---- allergens ----
+
+  function pageContainsAllergenData(data) {
+    return data.categories.some(function (cat) {
+      if (cat.allergens) return true;
+      if (cat.items) return cat.items.some(function (i) { return i.allergens; });
+      if (cat.flatItems) return cat.flatItems.some(function (fi) { return fi.allergens; });
+      if (cat.subgroups) return cat.subgroups.some(function (sg) { return sg.items.some(function (i) { return i.allergens; }); });
+      return false;
+    });
+  }
+
+  function buildAllergenLink(lang) {
+    var p = document.createElement("p");
+    p.className = "allergen-link-note";
+    var a = document.createElement("a");
+    a.href = up + window.allergensHref(lang);
+    a.textContent = window.ALLERGEN_LINK_LABEL[lang];
+    p.appendChild(a);
+    return p;
+  }
+
+  // Small superscript of allergen numbers next to an item's name, matching
+  // the printed menu's convention (e.g. "Nostromo⁴˒⁵"). Returns null when
+  // the item has no allergen data.
+  function buildAllergenSup(allergens) {
+    if (!allergens || !allergens.length) return null;
+    var sup = document.createElement("sup");
+    sup.className = "allergen-sup";
+    sup.textContent = allergens.join(",");
+    return sup;
+  }
+
   // Staff (and the kitchen) think in Italian. If a customer on a translated
   // page points at an item, whoever is serving them needs to see the original
   // Italian name to know what's actually being ordered -- so every item shows
@@ -143,7 +179,9 @@
     if (item.variant === "highlighted") details.style.gap = "10px";
 
     var h3 = document.createElement("h3");
-    h3.textContent = item.name[lang];
+    h3.appendChild(document.createTextNode(item.name[lang]));
+    var itemSup = buildAllergenSup(item.allergens);
+    if (itemSup) h3.appendChild(itemSup);
     details.appendChild(h3);
 
     var itHint = buildItalianHint(lang, item.name.it, item.name[lang]);
@@ -154,6 +192,7 @@
         var span = document.createElement("span");
         span.appendChild(document.createTextNode(size.label[lang] + ": "));
         var b = document.createElement("b");
+        if (size.id) b.setAttribute("data-id", size.id);
         b.textContent = size.price;
         span.appendChild(b);
         details.appendChild(span);
@@ -192,6 +231,15 @@
     banner.textContent = cat.banner[lang];
     wrap.appendChild(banner);
 
+    var catSup = buildAllergenSup(cat.allergens);
+    if (catSup) {
+      var catAllergenNote = document.createElement("div");
+      catAllergenNote.className = "flat-item-allergens";
+      catAllergenNote.appendChild(document.createTextNode("🔬 "));
+      catAllergenNote.appendChild(catSup);
+      wrap.appendChild(catAllergenNote);
+    }
+
     cat.flatItems.forEach(function (fi) {
       var row = document.createElement("div");
       row.className = "flat-item";
@@ -205,6 +253,8 @@
         row.appendChild(label);
         row.appendChild(document.createTextNode(" " + fi.text[lang]));
       }
+      var fiSup = buildAllergenSup(fi.allergens);
+      if (fiSup) row.appendChild(fiSup);
       var flatHint = buildItalianHint(lang, fi.text.it, fi.text[lang]);
       if (flatHint) row.appendChild(flatHint);
       wrap.appendChild(row);
@@ -216,6 +266,7 @@
   function buildSubgroupGrid(sg, lang) {
     var grid = document.createElement("div");
     grid.className = "menu-grid";
+    if (sg.id) grid.setAttribute("data-category", sg.id);
     sg.items.forEach(function (item) {
       var wrap = document.createElement("div");
       wrap.className = "menu-item";
@@ -233,6 +284,7 @@
         if (idx > 0) p.appendChild(document.createTextNode(" | "));
         p.appendChild(document.createTextNode(size.label[lang] + ": "));
         var b = document.createElement("b");
+        if (size.id) b.setAttribute("data-id", size.id);
         b.textContent = size.price;
         p.appendChild(b);
       });

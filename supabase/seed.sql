@@ -39,22 +39,43 @@ values
 ('drinks-long-drinks-6', 'drinks', 'long-drinks', 'Long Drinks & Cocktails', 'Negroni', '€9.50', 6, false, false),
 ('drinks-long-drinks-7', 'drinks', 'long-drinks', 'Long Drinks & Cocktails', 'Negroni Sbagliato', '€9.00', 7, false, false),
 
--- drinks / Beers (bottled only; draft-beer card stays static)
-('drinks-beers-1', 'drinks', 'beers', 'Beers', 'Moretti Radler', '€6.00', 1, false, false),
-('drinks-beers-2', 'drinks', 'beers', 'Beers', 'Moretti La Rossa', '€6.00', 2, false, false),
-('drinks-beers-3', 'drinks', 'beers', 'Beers', 'Ceres', '€6.00', 3, false, false),
-('drinks-beers-4', 'drinks', 'beers', 'Beers', 'Moretti Zero (Non-Alcoholic)', '€5.50', 4, false, false),
-('drinks-beers-5', 'drinks', 'beers', 'Beers', 'Nastro Azzurro', '€5.00', 5, false, false),
-('drinks-beers-6', 'drinks', 'beers', 'Beers', 'Heineken', '€5.00', 6, false, false),
-('drinks-beers-7', 'drinks', 'beers', 'Beers', 'Corona', '€5.00', 7, false, false),
-('drinks-beers-8', 'drinks', 'beers', 'Beers', 'Beck''s 33cl', '€4.50', 8, false, false),
-('drinks-beers-9', 'drinks', 'beers', 'Beers', 'Beggia 33cl', '€6.50', 9, false, false),
+-- drinks / Beers
+('drinks-beers-draft-small', 'drinks', 'beers', 'Beers', 'Moretti Draft Beer (Alla Spina) - Small (20cl)', '€4.00', 1, false, false),
+('drinks-beers-draft-medium', 'drinks', 'beers', 'Beers', 'Moretti Draft Beer (Alla Spina) - Medium (40cl)', '€7.00', 2, false, false),
+('drinks-beers-draft-large', 'drinks', 'beers', 'Beers', 'Moretti Draft Beer (Alla Spina) - Large (100cl)', '€15.00', 3, false, false),
+('drinks-beers-1', 'drinks', 'beers', 'Beers', 'Moretti Radler', '€6.00', 4, false, false),
+('drinks-beers-2', 'drinks', 'beers', 'Beers', 'Moretti La Rossa', '€6.00', 5, false, false),
+('drinks-beers-3', 'drinks', 'beers', 'Beers', 'Ceres', '€6.00', 6, false, false),
+('drinks-beers-4', 'drinks', 'beers', 'Beers', 'Moretti Zero (Non-Alcoholic)', '€5.50', 7, false, false),
+('drinks-beers-5', 'drinks', 'beers', 'Beers', 'Nastro Azzurro', '€5.00', 8, false, false),
+('drinks-beers-6', 'drinks', 'beers', 'Beers', 'Heineken', '€5.00', 9, false, false),
+('drinks-beers-7', 'drinks', 'beers', 'Beers', 'Corona', '€5.00', 10, false, false),
+('drinks-beers-8', 'drinks', 'beers', 'Beers', 'Beck''s 33cl', '€4.50', 11, false, false),
+('drinks-beers-9', 'drinks', 'beers', 'Beers', 'Beggia 33cl', '€6.50', 12, false, false),
 
 -- drinks / House Wine (Vino della Casa)
 ('drinks-house-wine-1', 'drinks', 'house-wine', 'House Wine (Vino della Casa)', 'By the Glass (Calice)', '€3.00', 1, false, false),
 ('drinks-house-wine-2', 'drinks', 'house-wine', 'House Wine (Vino della Casa)', '1/4 Litre', '€7.00', 2, false, false),
 ('drinks-house-wine-3', 'drinks', 'house-wine', 'House Wine (Vino della Casa)', '1/2 Litre', '€9.00', 3, false, false),
 ('drinks-house-wine-4', 'drinks', 'house-wine', 'House Wine (Vino della Casa)', '1 Litre', '€13.00', 4, false, false),
+
+-- drinks / Wine List (Vini in Bottiglia) -- White Wines
+('drinks-wine-white-1-glass', 'drinks', 'wine-list-white', 'Wine List - White Wines', 'Pinot Grigio / Chardonnay / Soave / Sauvignon / Lugana (Glass)', '€4.50', 1, false, false),
+('drinks-wine-white-1-bottle', 'drinks', 'wine-list-white', 'Wine List - White Wines', 'Pinot Grigio / Chardonnay / Soave / Sauvignon / Lugana (Bottle)', '€25.00', 2, false, false),
+('drinks-wine-white-2-glass', 'drinks', 'wine-list-white', 'Wine List - White Wines', 'Vermentino IGP Salento (Glass)', '€6.00', 3, false, false),
+('drinks-wine-white-2-bottle', 'drinks', 'wine-list-white', 'Wine List - White Wines', 'Vermentino IGP Salento (Bottle)', '€28.00', 4, false, false),
+
+-- drinks / Wine List (Vini in Bottiglia) -- Red Wines
+('drinks-wine-red-1-glass', 'drinks', 'wine-list-red', 'Wine List - Red Wines', 'Cabernet Franc / Cabernet Sauvignon / Chianti DOCG (Glass)', '€4.50 - €5.00', 1, false, false),
+('drinks-wine-red-1-bottle', 'drinks', 'wine-list-red', 'Wine List - Red Wines', 'Cabernet Franc / Cabernet Sauvignon / Chianti DOCG (Bottle)', '€25.00', 2, false, false),
+('drinks-wine-red-2-glass', 'drinks', 'wine-list-red', 'Wine List - Red Wines', 'Valpolicella Ripasso (Glass)', '€6.00', 3, false, false),
+('drinks-wine-red-2-bottle', 'drinks', 'wine-list-red', 'Wine List - Red Wines', 'Valpolicella Ripasso (Bottle)', '€27.00', 4, false, false),
+
+-- drinks / Wine List (Vini in Bottiglia) -- Rosé & Sparkling Wines
+('drinks-wine-rose-1-glass', 'drinks', 'wine-list-rose-sparkling', 'Wine List - Rosé & Sparkling Wines', 'Rosato / Prosecco DOC / Moscato (Glass)', '€4.50', 1, false, false),
+('drinks-wine-rose-1-bottle', 'drinks', 'wine-list-rose-sparkling', 'Wine List - Rosé & Sparkling Wines', 'Rosato / Prosecco DOC / Moscato (Bottle)', '€25.00', 2, false, false),
+('drinks-wine-rose-2-glass', 'drinks', 'wine-list-rose-sparkling', 'Wine List - Rosé & Sparkling Wines', 'Prosecco Superiore di Valdobbiadene DOCG (Glass)', '€5.00', 3, false, false),
+('drinks-wine-rose-2-bottle', 'drinks', 'wine-list-rose-sparkling', 'Wine List - Rosé & Sparkling Wines', 'Prosecco Superiore di Valdobbiadene DOCG (Bottle)', '€28.00', 4, false, false),
 
 -- drinks / Liqueurs & Bitters
 ('drinks-liqueurs-bitters-1', 'drinks', 'liqueurs-bitters', 'Liqueurs & Bitters', 'National Bitters & Liqueurs (Amari)', '€4.50 - €5.00', 1, false, false),
