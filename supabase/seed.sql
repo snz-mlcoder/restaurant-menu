@@ -151,7 +151,27 @@ values
 ('coffee-croissants-cafeteria-coffee-9', 'coffee-croissants', 'cafeteria-coffee', 'Cafeteria & Coffee', 'Hot Chocolate', '€5.00', 9, false, false),
 ('coffee-croissants-cafeteria-coffee-10', 'coffee-croissants', 'cafeteria-coffee', 'Cafeteria & Coffee', 'Caffè Frappé', '€5.50', 10, false, false),
 ('coffee-croissants-cafeteria-coffee-11', 'coffee-croissants', 'cafeteria-coffee', 'Cafeteria & Coffee', 'With Soy Milk option', '+€0.50', 11, false, false),
-('coffee-croissants-cafeteria-coffee-12', 'coffee-croissants', 'cafeteria-coffee', 'Cafeteria & Coffee', 'Banana Smoothie', '€6.00', 12, false, false)
+('coffee-croissants-cafeteria-coffee-12', 'coffee-croissants', 'cafeteria-coffee', 'Cafeteria & Coffee', 'Banana Smoothie', '€6.00', 12, false, false),
+
+-- desserts / Pasticceria
+('desserts-pasticceria-1', 'desserts', 'pasticceria', 'Pasticceria', 'Frolla "Occhio di Bue" al Cioccolato', '€3.00', 1, false, false),
+('desserts-pasticceria-2', 'desserts', 'pasticceria', 'Pasticceria', 'Frolla "Occhio di Bue" alla Marmellata', '€3.00', 2, false, false),
+('desserts-pasticceria-3', 'desserts', 'pasticceria', 'Pasticceria', 'Frolla alla Mela', '€3.00', 3, false, false),
+('desserts-pasticceria-4', 'desserts', 'pasticceria', 'Pasticceria', 'Crostatina al Cioccolato', '€3.00', 4, false, false),
+('desserts-pasticceria-5', 'desserts', 'pasticceria', 'Pasticceria', 'Crostatina alla Marmellata', '€3.00', 5, false, false),
+
+-- desserts / Semifreddi
+('desserts-semifreddi-1', 'desserts', 'semifreddi', 'Semifreddi', 'Tartufo Classico', '€6.00', 1, false, false),
+('desserts-semifreddi-2', 'desserts', 'semifreddi', 'Semifreddi', 'Tartufo Bianco', '€6.00', 2, false, false),
+
+-- desserts / Tiramisù
+('desserts-tiramisu-1', 'desserts', 'tiramisu', 'Tiramisù', 'Tiramisù con Savoiardi', '€6.00', 1, false, false),
+
+-- desserts / Coppe Gelato
+('desserts-coppe-gelato-1', 'desserts', 'coppe-gelato', 'Coppe Gelato', 'Coppa Cioccolato', '€7.50', 1, false, false),
+('desserts-coppe-gelato-2', 'desserts', 'coppe-gelato', 'Coppe Gelato', 'Coppa Spagnola', '€7.50', 2, false, false),
+('desserts-coppe-gelato-3', 'desserts', 'coppe-gelato', 'Coppe Gelato', 'Coppa Crema e Pistacchio', '€7.50', 3, false, false),
+('desserts-coppe-gelato-4', 'desserts', 'coppe-gelato', 'Coppe Gelato', 'Coppa Caffè', '€7.50', 4, false, false)
 
 on conflict (id) do update set
   name = excluded.name,

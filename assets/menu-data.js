@@ -424,4 +424,113 @@ window.MENU_DATA = {
   ],
 },
 
+"desserts": {
+  title: { en: "Desserts & Pastry", it: "Dessert & Pasticceria", es: "Postres y Pastelería", fr: "Desserts & Pâtisserie", de: "Desserts & Gebäck", zh: "甜点与糕点" },
+  menuBoxLabel: { en: "Desserts & Pastry", it: "Dessert & Pasticceria", es: "Postres y Pastelería", fr: "Desserts & Pâtisserie", de: "Desserts & Gebäck", zh: "甜点与糕点" },
+  categories: [
+    {
+      id: "pasticceria",
+      title: { en: "Pastries (Pasticceria)", it: "Pasticceria", es: "Pastelería", fr: "Pâtisseries", de: "Gebäck (Pasticceria)", zh: "糕点" },
+      type: "grid",
+      items: [
+        {
+          id: "desserts-pasticceria-1",
+          name: { en: "Frolla \"Occhio di Bue\" al Cioccolato", it: "Frolla \"Occhio di Bue\" al Cioccolato", es: "Frolla \"Occhio di Bue\" al Cioccolato", fr: "Frolla \"Occhio di Bue\" al Cioccolato", de: "Frolla \"Occhio di Bue\" al Cioccolato", zh: "巧克力夹心酥饼（Frolla Occhio di Bue）" },
+          desc: { en: "Shortcrust cookie filled with chocolate cream", it: "Pasta frolla farcita con crema al cioccolato", es: "Galleta de pasta frola rellena de crema de chocolate", fr: "Sablé fourré à la crème de chocolat", de: "Mürbeteigkeks gefüllt mit Schokoladencreme", zh: "夹心巧克力奶油酥饼" },
+          price: "€3.00",
+        },
+        {
+          id: "desserts-pasticceria-2",
+          name: { en: "Frolla \"Occhio di Bue\" alla Marmellata", it: "Frolla \"Occhio di Bue\" alla Marmellata", es: "Frolla \"Occhio di Bue\" alla Marmellata", fr: "Frolla \"Occhio di Bue\" alla Marmellata", de: "Frolla \"Occhio di Bue\" alla Marmellata", zh: "果酱夹心酥饼（Frolla Occhio di Bue）" },
+          desc: { en: "Shortcrust cookie filled with jam", it: "Pasta frolla farcita con marmellata", es: "Galleta de pasta frola rellena de mermelada", fr: "Sablé fourré à la confiture", de: "Mürbeteigkeks gefüllt mit Marmelade", zh: "夹心果酱酥饼" },
+          price: "€3.00",
+        },
+        {
+          id: "desserts-pasticceria-3",
+          name: { en: "Frolla alla Mela", it: "Frolla alla Mela", es: "Frolla alla Mela", fr: "Frolla alla Mela", de: "Frolla alla Mela", zh: "苹果酥饼（Frolla alla Mela）" },
+          desc: { en: "Shortcrust tart filled with apple cream", it: "Pasta frolla farcita con crema di mela", es: "Tarta de pasta frola rellena de crema de manzana", fr: "Tarte sablée à la crème de pomme", de: "Mürbeteigtörtchen mit Apfelcreme-Füllung", zh: "苹果奶油挞" },
+          price: "€3.00",
+        },
+        {
+          id: "desserts-pasticceria-4",
+          name: { en: "Crostatina al Cioccolato", it: "Crostatina al Cioccolato", es: "Crostatina al Cioccolato", fr: "Crostatina al Cioccolato", de: "Crostatina al Cioccolato", zh: "黑巧克力挞（Crostatina al Cioccolato）" },
+          desc: { en: "Shortcrust tart with dark chocolate filling", it: "Pasta frolla con ripieno di cioccolato fondente", es: "Tartaleta con relleno de chocolate negro", fr: "Tartelette au chocolat noir", de: "Mürbeteigtörtchen mit dunkler Schokoladenfüllung", zh: "黑巧克力挞" },
+          price: "€3.00",
+        },
+        {
+          id: "desserts-pasticceria-5",
+          name: { en: "Crostatina alla Marmellata", it: "Crostatina alla Marmellata", es: "Crostatina alla Marmellata", fr: "Crostatina alla Marmellata", de: "Crostatina alla Marmellata", zh: "果酱挞（Crostatina alla Marmellata）" },
+          desc: { en: "Shortcrust tart with jam filling", it: "Pasta frolla con ripieno di marmellata", es: "Tartaleta con relleno de mermelada", fr: "Tartelette à la confiture", de: "Mürbeteigtörtchen mit Marmeladenfüllung", zh: "果酱挞" },
+          price: "€3.00",
+        },
+      ],
+    },
+    {
+      id: "semifreddi",
+      title: { en: "Semifreddi", it: "Semifreddi", es: "Semifríos (Semifreddi)", fr: "Semifreddi", de: "Halbgefrorene Desserts (Semifreddi)", zh: "半冻甜品（Semifreddi）" },
+      type: "grid",
+      items: [
+        {
+          id: "desserts-semifreddi-1",
+          name: { en: "Tartufo Classico", it: "Tartufo Classico", es: "Tartufo Classico", fr: "Tartufo Classico", de: "Tartufo Classico", zh: "经典松露雪糕（Tartufo Classico）" },
+          desc: { en: "Zabaione semifreddo and chocolate gelato, hazelnut brittle and cocoa", it: "Gelato semifreddo allo zabaione e gelato al cioccolato, decorato con granella di nocciole e cacao", es: "Semifrío de zabaione y helado de chocolate, decorado con crocante de avellanas y cacao", fr: "Semifreddo au sabayon et glace au chocolat, décoré d'éclats de noisette et de cacao", de: "Zabaione-Halbgefrorenes und Schokoladeneis, verziert mit Haselnusskrokant und Kakao", zh: "萨巴雍半冻甜品搭配巧克力冰淇淋，饰以榛子碎和可可粉" },
+          note: { en: "Also available as Affogato con Tartufo Nero — €7.00", it: "Disponibile anche come Affogato con Tartufo Nero — €7,00", es: "También disponible como Affogato con Tartufo Nero — €7,00", fr: "Également disponible en Affogato con Tartufo Nero — €7,00", de: "Auch als Affogato con Tartufo Nero erhältlich — €7,00", zh: "也可选择 Affogato con Tartufo Nero（浓缩咖啡浇淋）— €7,00" },
+          price: "€6.00",
+        },
+        {
+          id: "desserts-semifreddi-2",
+          name: { en: "Tartufo Bianco", it: "Tartufo Bianco", es: "Tartufo Bianco", fr: "Tartufo Bianco", de: "Tartufo Bianco", zh: "白松露雪糕（Tartufo Bianco）" },
+          desc: { en: "Zabaione semifreddo with a coffee gelato heart, meringue brittle", it: "Gelato semifreddo allo zabaione con cuore di gelato al caffè, decorato con granella di meringa", es: "Semifrío de zabaione con corazón de helado de café, decorado con crocante de merengue", fr: "Semifreddo au sabayon avec un cœur de glace au café, décoré d'éclats de meringue", de: "Zabaione-Halbgefrorenes mit Kaffeeeis-Herz, verziert mit Baiser-Krokant", zh: "萨巴雍半冻甜品，中心为咖啡冰淇淋芯，饰以蛋白霜碎" },
+          note: { en: "Also available as Affogato con Tartufo Bianco — €7.00", it: "Disponibile anche come Affogato con Tartufo Bianco — €7,00", es: "También disponible como Affogato con Tartufo Bianco — €7,00", fr: "Également disponible en Affogato con Tartufo Bianco — €7,00", de: "Auch als Affogato con Tartufo Bianco erhältlich — €7,00", zh: "也可选择 Affogato con Tartufo Bianco（浓缩咖啡浇淋）— €7,00" },
+          price: "€6.00",
+        },
+      ],
+    },
+    {
+      id: "tiramisu",
+      title: { en: "Tiramisù", it: "Tiramisù", es: "Tiramisú", fr: "Tiramisu", de: "Tiramisu", zh: "提拉米苏" },
+      type: "grid",
+      items: [
+        {
+          id: "desserts-tiramisu-1",
+          name: { en: "Tiramisù con Savoiardi", it: "Tiramisù con Savoiardi", es: "Tiramisù con Savoiardi", fr: "Tiramisù con Savoiardi", de: "Tiramisù con Savoiardi", zh: "手指饼提拉米苏" },
+          desc: { en: "Mascarpone cream with coffee-soaked ladyfingers", it: "Crema al mascarpone e savoiardi imbevuti di caffè", es: "Crema de mascarpone con bizcochos de soletilla empapados en café", fr: "Crème de mascarpone avec biscuits à la cuillère imbibés de café", de: "Mascarponecreme mit kaffeegetränkten Löffelbiskuits", zh: "马斯卡彭奶油配咖啡浸泡手指饼干" },
+          price: "€6.00",
+        },
+      ],
+    },
+    {
+      id: "coppe-gelato",
+      title: { en: "Gelato Cups (Coppe Gelato)", it: "Coppe Gelato", es: "Copas de Helado", fr: "Coupes de Glace", de: "Eisbecher (Coppe Gelato)", zh: "冰淇淋杯" },
+      type: "grid",
+      items: [
+        {
+          id: "desserts-coppe-gelato-1",
+          name: { en: "Coppa Cioccolato", it: "Coppa Cioccolato", es: "Coppa Cioccolato", fr: "Coppa Cioccolato", de: "Coppa Cioccolato", zh: "巧克力冰淇淋杯" },
+          desc: { en: "Cream gelato with dark chocolate ripple", it: "Gelato alla crema con variegato al cioccolato fondente", es: "Helado de crema con variegado de chocolate negro", fr: "Glace à la crème avec marbrure de chocolat noir", de: "Cremeeis mit dunkler Schokoladensauce", zh: "奶油冰淇淋配黑巧克力酱" },
+          price: "€7.50",
+        },
+        {
+          id: "desserts-coppe-gelato-2",
+          name: { en: "Coppa Spagnola", it: "Coppa Spagnola", es: "Coppa Spagnola", fr: "Coppa Spagnola", de: "Coppa Spagnola", zh: "西班牙风味冰淇淋杯" },
+          desc: { en: "Cream gelato with black cherry and whipped cream", it: "Gelato alla panna con amarena e panna montata", es: "Helado de nata con guindas y nata montada", fr: "Glace à la crème avec griottes et crème fouettée", de: "Sahneeis mit Amarenakirschen und Schlagsahne", zh: "奶油冰淇淋配黑樱桃和打发奶油" },
+          price: "€7.50",
+        },
+        {
+          id: "desserts-coppe-gelato-3",
+          name: { en: "Coppa Crema e Pistacchio", it: "Coppa Crema e Pistacchio", es: "Coppa Crema e Pistacchio", fr: "Coppa Crema e Pistacchio", de: "Coppa Crema e Pistacchio", zh: "奶油开心果冰淇淋杯" },
+          desc: { en: "Cream and pistachio gelato with whipped cream", it: "Gelato alla crema e al pistacchio con panna montata", es: "Helado de crema y pistacho con nata montada", fr: "Glace à la crème et à la pistache avec crème fouettée", de: "Creme- und Pistazieneis mit Schlagsahne", zh: "奶油开心果冰淇淋配打发奶油" },
+          price: "€7.50",
+        },
+        {
+          id: "desserts-coppe-gelato-4",
+          name: { en: "Coppa Caffè", it: "Coppa Caffè", es: "Coppa Caffè", fr: "Coppa Caffè", de: "Coppa Caffè", zh: "咖啡冰淇淋杯" },
+          desc: { en: "Coffee gelato with whipped cream", it: "Gelato al caffè con panna montata", es: "Helado de café con nata montada", fr: "Glace au café avec crème fouettée", de: "Kaffeeeis mit Schlagsahne", zh: "咖啡冰淇淋配打发奶油" },
+          price: "€7.50",
+        },
+      ],
+    },
+  ],
+},
+
 };

@@ -4,6 +4,7 @@
     "foods": "Food & Pizza",
     "snacks": "Snacks & Cicchetti",
     "coffee-croissants": "Coffee & Croissants",
+    "desserts": "Desserts & Pastry",
   };
 
   var loginView = document.getElementById("login-view");
